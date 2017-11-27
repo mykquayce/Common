@@ -2,10 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Bob</Authors>
+    <Company />
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Product>Common</Product>
   </PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Common.Exceptions\Common.Exceptions.csproj" />
   </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="&quot;$(DevEnvDir)..\..\MSBuild\15.0\Bin\amd64\MSBuild.exe&quot; /target:Pack &quot;$(ProjectPath)&quot; /property:PackageOutputPath=&quot;\\padme\NuGetServer\Packages&quot;" />
+  </Target>
 
 </Project>
