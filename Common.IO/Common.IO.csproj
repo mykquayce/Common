@@ -4,8 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <Authors>Bob</Authors>
     <Company />
-    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Product>Common</Product>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <ItemGroup>

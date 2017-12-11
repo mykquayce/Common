@@ -24,6 +24,8 @@ namespace Common.Collections
 
 			return success;
 		}
+
+		public new int Count => base.Count;
 		#endregion Overidden Members
 
 		#region INotifyCollectionChanged Support

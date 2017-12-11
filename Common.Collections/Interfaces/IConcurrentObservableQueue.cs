@@ -8,5 +8,6 @@ namespace Common.Collections.Interfaces
 
 		void Enqueue(T item);
 		bool TryDequeue(out T result);
+		int Count { get; }
 	}
 }
