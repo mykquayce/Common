@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="&quot;$(DevEnvDir)..\..\MSBuild\15.0\Bin\amd64\MSBuild.exe&quot; /target:Pack &quot;$(ProjectPath)&quot; /property:PackageOutputPath=&quot;\\padme\NuGetServer\Packages&quot;" />
+    <Exec Command="&quot;$(DevEnvDir)..\..\MSBuild\15.0\Bin\amd64\MSBuild.exe&quot; /target:Pack &quot;$(ProjectPath)&quot; /property:PackageOutputPath=&quot;\\nuget\NuGetServer\Packages&quot;" />
   </Target>
 
 </Project>
